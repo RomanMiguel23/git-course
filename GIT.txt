@@ -88,6 +88,10 @@ https://github.com/RomanMiguel23?tab=repositories
 -----------------------------------------------------------------------
 Creamos nuestro nuevo repositorio
 https://github.com/new
+Al momento de crear nos aparece comandos para colocarlo en git bush
+git remote add origin https://github.com/RomanMiguel23/git-course.git
+git push -u origin master -> Para agregar nuevos archivos al repositorio nuevo o en el que 					estamos (aparecera el login,luego empezara a subir el 				codigo). 
+
 Nuevo repositorio:
 https://github.com/RomanMiguel23/git-course
 OJO: El archivo readme.md es para saber de que trata el proyecto subido
