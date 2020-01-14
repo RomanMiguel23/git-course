@@ -1,0 +1,97 @@
+-----------
+GIT	  |
+-----------
+-OPEN SOURCE
+-Sistema de control de versiones
+-Programa que controla o administra versiones de programas.
+-Sistema de control distribuido
+-Multiples desarrolladores trabajando en el mismo proyecto
+-Quien realizo el cambio y cuando
+-Revertir cambios en el tiempo
+-Repositorio remoto y local
+
+
+--------------------------
+Conceptos Claves	  |
+--------------------------
+
+- Provee seguir el historial de tu codigo.
+- Tambien dar seguimiento mediante Snapshot
+- Tu decides cuando realizas el snapshot
+- Tu puedes visitar cualquier snapshot de cualquier tiempo
+- Puedes organizar los archivos antes de comitear.
+
+--------------------------
+Comandos Básicos	  |
+--------------------------
+
+-git init      -- Voy a utilizar en este proyecto git.
+-git add <file> -- Es para poder pasar los archivos del working directory al staging area
+-git status    -- Para ver en donde estan mis archivos si estan en el working directory, 		 staging area
+-git commit    -- Es para pasarlo desde el staging area al repository(Es tan solo para crear
+		  un primer snapshot o primera version del codigo)
+-git push      -- Es para subirlo a un repositorio remoto. Es cuando lo tengas trabajado lo 		  vas a subir a un servidor para que pueda ser accedido por los 		  desarrolladores que tengan permiso, para modificar el código.
+-git pull      -- En caso estes trabajando con multiples desarrolladores, te traes los 		  cambios que han hecho los otros desarrolladores.
+-git clone     -- Es hacer una copia desde el servidor central donde esta el código a tu 		  computador para que empiezes a trabajar.
+-----------------
+# Tres Estados	|
+-----------------
+1-Working directory  --Donde vamos estar trabajando con todos tus archivos.
+2-Staging area -- Donde vamos a estar agregando todos los archivos que vamos a preparar para 		el guardado, es decir en git habra un listado de multiples cambios desde 
+		version 1...2...3...to ..10. 
+3-Repository
+
+---------------------------------------------------------------------------
+LINKS
+---------------------------------------------------------------------------
+https://git-scm.com/
+DOWNLOAD
+----------------------------------------------------------------------------
+GIT BASH
+----------------------------------------------------------------------------
+
+1- inicializar el proyecto y trabajar con git. -> Git init
+2-  para ver donde estan los archivos ->git status
+3-  Para el segundo punto debemos agregar los archivos con -->git add filename.
+4.  Para crear un primer punto de control de nuestro código. -->git commit
+    Debemos indicar quien esta realizando los cambios con los siguientes comandos:
+	  git config --global user.email "you@example.com"
+	  git config --global user.name "Your Name"
+4.1 Colocamos -->git commit
+4.2 Nos arrojara a una pantalla presionamos la tecla 'i' para escribir por ejemplo 'mi primer commit.,luego presionamos la tecla "ESC" y en la parte de abajo escribimos ":wq"
+5. Para ver todos los commits que hemos creados-->git log
+5.1. para ver que podemos hacer --> git status.
+6. Podemo revertir los cambios en los archivos usando -- >git checkout -- filename.extension
+7. Quisiera ver las diferencias hechas en los archivos.--> git diff filename.extension
+8. Si queremos ignorar una carpeta- Creamos un archivo --> .gitignore
+   Ahi colocamos el nombre de la carpeta ejemplo : test, excepto que el archivo .gitignore      debemos agregarlo y comitearlo.
+8.1. otra forma de comitearlo sin entrar al editor bin es --> git commit -m "Comentario"
+-----------------------------------------------------------------------------------------
+
+
+Mediante---> git branch , vemos que estamos en master
+generamos un nuevo branch por ejemplo --> git branch login
+Luego cambiamos al nuevo branch y agregamos nuevos archivos--> git checkout login
+vemos que estamos en el branch login --> git branch
+Para agregar varios archivos usamos --> git add .
+Luego realizamos el commit --> git commit -m "comentario"
+Luego vemos el log del nuevo branch -- > git log
+si cambiamos al branch master , vamos a ver que los archivos que creamos en el branch login no figuraran --> git checkout master
+Como tampoco usando el registro de log  --> git log
+
+------------------------------------------------------------------------------------------
+
+GIT HUB
+
+--------------------------------------------------------------------------
+https://github.com/RomanMiguel23?tab=repositories
+-----------------------------------------------------------------------
+Creamos nuestro nuevo repositorio
+https://github.com/new
+Nuevo repositorio:
+https://github.com/RomanMiguel23/git-course
+OJO: El archivo readme.md es para saber de que trata el proyecto subido
+Si borramos el proyecto de nuestro escritorio lo bajamos desde git hub usando el link clone or download: 
+Abrimos el git bush y escribimos:
+Primero nos posicionamos en el escritorio o otra carpeta donde se va descargar.
+$ git clone https://github.com/RomanMiguel23/git-course.git
